@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/frontend-mentor-countries/static/css/main.7918a6b4.css",
-    "main.js": "/frontend-mentor-countries/static/js/main.f82165bd.js",
+    "main.js": "/frontend-mentor-countries/static/js/main.72039192.js",
     "index.html": "/frontend-mentor-countries/index.html",
     "static/media/chevron-down-solid-white.svg": "/frontend-mentor-countries/static/media/chevron-down-solid-white.6d066a1dad3beefe44ae.svg",
     "static/media/chevron-up-solid-white.svg": "/frontend-mentor-countries/static/media/chevron-up-solid-white.051565f0710578d72d9d.svg",
     "static/media/chevron-down-solid.svg": "/frontend-mentor-countries/static/media/chevron-down-solid.03eeee661ed93a2de996.svg",
     "static/media/chevron-up-solid.svg": "/frontend-mentor-countries/static/media/chevron-up-solid.c2347870cc11eaa47746.svg",
     "main.7918a6b4.css.map": "/frontend-mentor-countries/static/css/main.7918a6b4.css.map",
-    "main.f82165bd.js.map": "/frontend-mentor-countries/static/js/main.f82165bd.js.map"
+    "main.72039192.js.map": "/frontend-mentor-countries/static/js/main.72039192.js.map"
   },
   "entrypoints": [
     "static/css/main.7918a6b4.css",
-    "static/js/main.f82165bd.js"
+    "static/js/main.72039192.js"
   ]
 }
