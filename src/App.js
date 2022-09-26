@@ -11,6 +11,7 @@ function App() {
       <Layout>
         <Routes>
           <Route exact path="/" element={<MainPage />} />
+          <Route path="/frontend-mentor-countries" element={<MainPage />} />
           <Route path="/:name" element={<DetailPage />} />
         </Routes>
       </Layout>
