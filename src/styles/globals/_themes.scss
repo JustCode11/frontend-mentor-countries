@@ -1,0 +1,160 @@
+@use './colors' as color;
+@use '../utils/' as u;
+
+#light {
+    color: color.$veryDarkBlueText;
+
+    .header {
+        background-color: color.$white;
+    }
+
+    .container {
+        .searchForm {
+            &__searchInputContainer {
+                &__searchIcon {
+                    color: color.$darkGrayInput;
+                }
+
+                &__searchInput {
+                    background-color: color.$white;
+                    color: color.$darkGrayInput;
+                }
+            }
+
+            &__dropDownContainer {
+
+                &__dropDownInput {
+                    background-color: color.$white;
+                    color: color.$veryDarkBlueText;
+                    background-image: url('../../public/images/chevron-down-solid.svg');
+
+                    &.open {
+                        background-image: url('../../public/images/chevron-up-solid.svg');
+                    }
+                }
+
+                &__listContainer {
+                    background-color: color.$white;
+
+                    &__list {
+                        &__item {
+                            &:hover {
+                                background-color: color.$veryLightGrayBg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainPageContainer {
+            .countryCardContainer {
+                background-color: color.$white;
+            }
+        }
+    }
+
+    .container-smaller {
+        .backButton {
+            background-color: color.$white;
+        }
+
+        .detailPageContainer {
+            &__bottom {
+                &__borderCountriesContainer {
+                    &__area {
+                        &__button {
+                            background-color: color.$white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#dark {
+    color: color.$white;
+
+    .header {
+        background-color: color.$darkBlue;
+
+        &__darkModeContainer {
+
+            svg {
+                position: relative;
+                right: u.rem(3);
+                top: u.rem(1);
+            }
+        }
+    }
+
+    .container {
+        .searchForm {
+            &__searchInputContainer {
+                &__searchIcon {
+                    color: color.$white;
+                }
+
+                &__searchInput {
+                    background-color: color.$darkBlue;
+                    color: color.$white;
+
+                    &::placeholder {
+                        color: color.$white;
+                    }
+                }
+            }
+
+            &__dropDownContainer {
+                &__dropDownInput {
+                    background-color: color.$darkBlue;
+                    color: color.$white;
+                    background-image: url('../../public/images/chevron-down-solid-white.svg');
+
+                    &.open {
+                        background-image: url('../../public/images/chevron-up-solid-white.svg');
+                    }
+                }
+
+                &__listContainer {
+                    background-color: color.$darkBlue;
+
+                    &__list {
+                        &__item {
+                            &:hover {
+                                background-color: color.$veryDarkBlueBg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mainPageContainer {
+            .countryCardContainer {
+                background-color: color.$darkBlue;
+            }
+        }
+    }
+
+    .container-smaller {
+        .backButton {
+            color: color.$white;
+            background-color: color.$darkBlue;
+        }
+
+        .detailPageContainer {
+            &__bottom {
+                &__borderCountriesContainer {
+                    &__area {
+                        &__button {
+                            color: color.$white;
+                            background-color: color.$darkBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

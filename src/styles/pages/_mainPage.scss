@@ -1,0 +1,31 @@
+@use '../utils' as u;
+@use '../globals/' as v;
+
+.mainPageContainer {
+    padding-top: u.rem(32);
+    padding-bottom: u.rem(32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include u.breakpoint-up(large) {
+        padding-top: u.rem(50);
+        display: grid;
+        grid-template-columns: u.rem(265) u.rem(265) u.rem(265) u.rem(265);
+        justify-content: space-between;
+        row-gap: u.rem(75);
+    }
+
+    &__link {
+        @include u.breakpoint-down(medium) {
+            margin-bottom: u.rem(40);
+        }
+
+        //width: u.rem(265);
+
+        /*&:not(:first-child, :last-child) {
+            margin-top: u.rem(40);
+            margin-bottom: u.rem(40);
+        }*/
+    }
+}

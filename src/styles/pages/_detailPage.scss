@@ -1,0 +1,134 @@
+@use '../utils' as u;
+@use '../globals/' as v;
+
+@mixin info-box-style {
+    @include u.breakpoint-down(medium) {
+        margin-bottom: u.rem(20);
+    }
+
+    p {
+        padding-top: u.rem(5);
+        padding-bottom: u.rem(5);
+
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+.backButton {
+    margin-top: u.rem(40);
+    margin-bottom: u.rem(64);
+    width: u.rem(105);
+    height: u.rem(32);
+
+    @include u.breakpoint-up(large) {
+        margin-top: u.rem(80);
+        margin-bottom: u.rem(80);
+    }
+
+    span {
+        margin-left: u.rem(10);
+    }
+}
+
+.detailPageContainer {
+    display: flex;
+    flex-direction: column;
+
+    @include u.breakpoint-down(large) {
+        align-items: center;
+    }
+
+    @include u.breakpoint-up(large) {
+        flex-direction: row;
+    }
+
+    &__top {
+        display: flex;
+        width: u.rem(320);
+        height: u.rem(230);
+
+        @include u.breakpoint-down(medium) {
+            margin-bottom: u.rem(45);
+        }
+
+        @include u.breakpoint-up(large) {
+            width: u.rem(560);
+            height: u.rem(400);
+            margin-right: u.rem(120);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__bottom {
+        @include u.breakpoint-up(large) {
+            align-self: center;
+        }
+
+        &__headline {
+            font-size: u.rem(24);
+            margin-bottom: u.rem(20);
+        }
+
+        &__infos {
+            display: flex;
+            flex-direction: column;
+
+            @include u.breakpoint-up(large) {
+                flex-direction: row;
+                margin-bottom: u.rem(75);
+            }
+
+            &__top {
+                @include info-box-style;
+
+                @include u.breakpoint-up(large) {
+                    margin-right: u.rem(140);
+                }
+            }
+
+            &__bottom {
+                @include info-box-style;
+            }
+        }
+
+        &__borderCountriesContainer {
+            display: flex;
+            flex-direction: column;
+
+            @include u.breakpoint-up(large) {
+                flex-direction: row;
+            }
+
+            &__headline {
+                font-size: u.rem(18);
+                font-weight: 600;
+
+                @include u.breakpoint-down(medium) {
+                    margin-bottom: u.rem(15);
+                }
+
+                @include u.breakpoint-up(large) {
+                    margin-right: u.rem(15);
+                }
+            }
+
+            &__area {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                row-gap: u.rem(10);
+                column-gap: u.rem(10);
+
+                &__button {
+                    min-width: u.rem(97);
+                    height: u.rem(30);
+                }
+            }
+        }
+    }
+}

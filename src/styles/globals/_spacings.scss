@@ -1,0 +1,26 @@
+@use '../utils/' as u;
+
+$leftRightPaddingDesktop: 80;
+$leftRightPaddingMobile: 16;
+
+$leftRightPaddingSmallerMobile: 27;
+
+.container {
+    padding-left: u.rem($leftRightPaddingMobile);
+    padding-right: u.rem($leftRightPaddingMobile);
+
+    @include u.breakpoint-up(large) {
+        padding-left: u.rem($leftRightPaddingDesktop);
+        padding-right: u.rem($leftRightPaddingDesktop);
+    }
+}
+
+.container-smaller {
+    padding-left: u.rem($leftRightPaddingSmallerMobile);
+    padding-right: u.rem($leftRightPaddingSmallerMobile);
+
+    @include u.breakpoint-up(large) {
+        padding-left: u.rem($leftRightPaddingDesktop);
+        padding-right: u.rem($leftRightPaddingDesktop);
+    }
+}
