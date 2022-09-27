@@ -54,7 +54,7 @@
         }
 
         @include u.breakpoint-up(large) {
-            width: u.rem(560);
+            min-width: u.rem(560);
             height: u.rem(400);
             margin-right: u.rem(120);
         }

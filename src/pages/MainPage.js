@@ -19,15 +19,7 @@ const MainPage = () => {
             await fetch(searchFormState.selectedRegion === "" ? fetchAllCountries : fetchCountriesByRegion)
                 .then((res) => res.json())
                 .then((data) => {
-                    if (searchFormState.searchTerm !== "") {
-                        let filteredCountries = data.filter((c) => {
-                            //console.log(c);
-                            return c.name.common.toLowerCase().indexOf(searchFormState.searchTerm.toLowerCase()) === 0;
-                        });
-                        dispatch({ type: ACTIONTYPES.FETCH_SUCCESS, payload: filteredCountries });
-                    } else {
-                        dispatch({ type: ACTIONTYPES.FETCH_SUCCESS, payload: data });
-                    }
+                    dispatch({ type: ACTIONTYPES.FETCH_SUCCESS, payload: data });
                 })
                 .catch((err) => {
                     dispatch({ type: ACTIONTYPES.FETCH_ERROR });
@@ -35,7 +27,20 @@ const MainPage = () => {
                 });
         }
         fetchCountries();
-    }, [searchFormState.selectedRegion, searchFormState.searchTerm]);
+    }, []);
+
+    useEffect(() => {
+        let filteredCountries = state.all_countries.filter((c) => {
+            return c.region.toLowerCase().indexOf(searchFormState.selectedRegion.toLowerCase()) === 0;
+        });
+        if (searchFormState.searchTerm !== "") {
+            filteredCountries = filteredCountries.filter((c) => {
+                //console.log(c);
+                return c.name.common.toLowerCase().indexOf(searchFormState.searchTerm.toLowerCase()) === 0;
+            });
+        }
+        dispatch({ type: ACTIONTYPES.SEARCH_COUNTRY, payload: filteredCountries });
+    }, [searchFormState.searchTerm, searchFormState.selectedRegion]);
     return (
         <div className="container">
             <SearchForm searchFormState={searchFormState} searchFormDispatch={searchFormDispatch} />
