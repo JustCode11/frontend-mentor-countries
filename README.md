@@ -41,8 +41,8 @@ Mobile Preview
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/mobilefirst-approach-with-react-and-sass-3d0FBCiqrA](https://www.frontendmentor.io/solutions/mobilefirst-approach-with-react-and-sass-3d0FBCiqrA)
+- Live Site URL: [https://justcode11.github.io/frontend-mentor-countries/](https://justcode11.github.io/frontend-mentor-countries/)
 
 ## My process
 
